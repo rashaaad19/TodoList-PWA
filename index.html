@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/idb.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/sw.js"></script>
+</head>
+
+<body>
+    <h1>To do List</h1>
+
+    <form onsubmit="idbApp.submitForm(event)" id="todoForm">
+        <h2>Add new todo</h2>
+
+        <label for="taskTitle">Task Title:</label>
+        <input type="text" id="taskTitle" name="taskTitle" required>
+
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" name="hours" min="0" max="23" required>
+
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" name="minutes" min="0" max="59" required>
+
+        <label for="day">Day:</label>
+        <select id="day" name="day">
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>
+
+        <label for="month">Month:</label>
+        <select id="month" name="month">
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+
+        <label for="year">Year:</label>
+        <select id="year" name="year">
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+
+        </select>
+
+        <button type="submit">Add Task</button>
+    </form>
+    <div id="tasksContainer"></div>
+
+</body>
+
+</html>
